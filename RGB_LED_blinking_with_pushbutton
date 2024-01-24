@@ -1,0 +1,24 @@
+int RED = 12, BLUE = 10, GREEN = 11, IP = 4;
+void setup(){
+  pinMode(BLUE, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(RED, OUTPUT);
+  pinMode(IP, INPUT);
+}
+
+void loop(){
+  if(digitalRead(IP) == HIGH){
+    digitalWrite(RED, HIGH);
+    delay(150);
+    digitalWrite(RED, LOW);
+    delay(150);
+    digitalWrite(BLUE, HIGH);
+    delay(150);
+    digitalWrite(BLUE, LOW);
+    delay(150);
+    digitalWrite(GREEN, HIGH);
+    delay(150);
+    digitalWrite(GREEN, LOW);
+    delay(150);
+  }
+}
