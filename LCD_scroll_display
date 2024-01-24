@@ -1,0 +1,18 @@
+#include <LiquidCrystal.h>
+int RS=12, E=11, D4=5, D5=4, D6=3, D7=2;
+LiquidCrystal lcd(RS, E, D4, D5, D6, D7);
+  
+void setup()
+{
+  lcd.begin(16,2);
+  lcd.setCursor(8,0);
+  lcd.print("Hariharan Kirubakaran");
+}
+
+void loop()
+{
+  while(1){
+    lcd.scrollDisplayLeft();
+    delay(120);
+  }
+}
