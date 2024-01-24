@@ -1,0 +1,19 @@
+#include<LiquidCrystal.h>
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+int count = 0, press;
+void setup()
+{
+  lcd.begin(16,2);
+  pinMode(6, INPUT);
+  
+}
+void loop()
+{
+  if(digitalRead(6) == HIGH){
+    press = count++;
+    delay(100);  // else for single press multiple increment happen
+  }
+  lcd.setCursor(0,0);
+  lcd.print(count);
+}
