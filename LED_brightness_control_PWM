@@ -1,0 +1,15 @@
+int duty_cycle_value = 1;
+int LED_PIN = 3;  // PWM pin
+void setup()
+{
+  pinMode( LED_PIN, OUTPUT);
+}
+
+void loop()
+{
+  while(duty_cycle_value < 255){  // 255 is the maximum voltage value
+    analogWrite(LED_PIN, duty_cycle_value);
+    duty_cycle_value++;
+    delay(50);
+  }
+}
